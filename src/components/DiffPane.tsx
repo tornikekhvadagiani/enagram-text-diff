@@ -25,7 +25,7 @@ export default function DiffPane({ parts, side, fontClass }: Props) {
                 return (
                   <span
                     key={idx}
-                    className="bg-red-50 text-red-700"
+                    className="text-[#B50022]"
                   >
                     {p.text}
                   </span>
@@ -36,7 +36,7 @@ export default function DiffPane({ parts, side, fontClass }: Props) {
                 return (
                   <span
                     key={idx}
-                    className="bg-green-50 text-green-700"
+                    className="text-[#3EBC5E]"
                   >
                     {p.text}
                   </span>

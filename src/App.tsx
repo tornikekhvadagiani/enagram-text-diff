@@ -52,14 +52,17 @@ export default function App() {
               <Loader progress={progress} />
             </div>
           ) : mode === "edit" ? (
-            <div className="mt-4 grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-center">
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_auto_1fr] gap-4 md:gap-5 lg:gap-6 items-start">
               <TextInput
                 value={left}
                 onChange={(v) => setLeft(v)}
                 placeholder="დაიწყე წერა..."
                 fontClass={fontFamily}
               />
-              <div className="self-stretch flex items-center justify-center">
+              <div className="flex md:hidden justify-center py-3">
+                <IconArrows className="w-6 h-6 text-slate-500 rotate-90" />
+              </div>
+              <div className="hidden lg:flex self-stretch items-center justify-center">
                 <IconArrows className="w-7 h-7 text-slate-500" />
               </div>
               <TextInput
@@ -70,13 +73,16 @@ export default function App() {
               />
             </div>
           ) : (
-            <div className="mt-4 grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-center">
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_auto_1fr] gap-4 md:gap-5 lg:gap-6 items-start">
               <DiffPane
                 parts={parts}
                 side="left"
                 fontClass={fontFamily}
               />
-              <div className="self-stretch flex items-center justify-center">
+              <div className="flex md:hidden justify-center py-3">
+                <IconArrows className="w-6 h-6 text-slate-500 rotate-90" />
+              </div>
+              <div className="hidden lg:flex self-stretch items-center justify-center">
                 <IconArrows className="w-7 h-7 text-slate-500" />
               </div>
               <DiffPane
@@ -87,7 +93,7 @@ export default function App() {
             </div>
           )}
 
-          <div className="my-6 flex items-center justify-center">
+          <div className="my-6 flex items-center justify-center px-4">
             {mode === "edit" ? (
               <CompareButton
                 onClick={onCompare}
@@ -96,7 +102,7 @@ export default function App() {
             ) : (
               <button
                 onClick={() => setMode("edit")}
-                className="rounded-md bg-slate-100 px-6 py-2 text-sm text-slate-700 hover:bg-slate-200"
+                className="w-full md:w-auto rounded-md bg-slate-100 px-6 py-2 text-sm text-slate-700 hover:bg-slate-200"
               >
                 რედაქტირება
               </button>

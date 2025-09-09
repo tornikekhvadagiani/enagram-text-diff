@@ -3,17 +3,19 @@ import logo from "../assets/enagram.png";
 
 export default function Sidebar() {
   return (
-    <aside className="bg-[#0f2241] text-white w-64 min-w-56 hidden md:flex flex-col justify-between">
+    <aside className="bg-[#132450] text-white w-64 min-w-56 hidden lg:flex flex-col justify-between">
       <div>
-        <div className="flex items-center gap-3 px-5 py-6 border-b border-white/10">
-          <div className="size-8 rounded bg-sky-400 flex items-center justify-center">
-            <img
-              src={logo}
-              alt="ENAGRAM"
-              className="w-5 h-5 object-contain"
-            />
+        <div className="flex items-start px-0 py-0 border-b border-white/10">
+          <div className="flex items-center gap-2 w-[110px] h-[44px] ml-6 mt-11">
+            <div className="relative w-7 h-7 overflow-hidden">
+              <img
+                src={logo}
+                alt="ENAGRAM"
+                className="absolute inset-0 w-9 h-9 object-cover object-top"
+              />
+            </div>
+            <div className="font-semibold leading-none">ENAGRAM</div>
           </div>
-          <div className="font-semibold">ENAGRAM</div>
         </div>
         <nav className="py-4">
           <ul className="flex flex-col">
@@ -26,13 +28,13 @@ export default function Sidebar() {
                 <span>მართლმწერი</span>
               </a>
             </li>
-            <li>
+            <li className="my-1">
               <a
-                className="flex items-center gap-3 px-5 py-3 bg-white/10"
+                className=" w-full flex items-center gap-3 px-5 py-3 bg-white text-[#132450] rounded-l-full rounded-tr-2xl rounded-br-2xl"
                 href="#"
               >
                 <IconCompare className="w-4 h-4" />
-                <span>ტექსტის შედარება</span>
+                <span className="font-medium">ტექსტის შედარება</span>
               </a>
             </li>
             <li>
