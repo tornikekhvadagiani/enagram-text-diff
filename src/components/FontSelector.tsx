@@ -10,8 +10,8 @@ export default function FontSelector({ value, onChange }: Props) {
       value={value}
       onChange={(e) => onChange(e.target.value)}
     >
-      <option value="georgian">ქართული</option>
-      <option value="english">English</option>
+      <option value="font-sans">ქართული</option>
+      <option value="font-serif">English</option>
     </select>
   );
 }
